@@ -1,0 +1,184 @@
+body {
+
+    font-family: 'Robot', sans-serif;
+    background-color: #E2E2E2;
+}
+
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    height: 8vh;
+}
+
+.header__content {
+
+    display: flex;
+    height: 100%;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__title {
+    color: #3B65E0;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.header__input--search.input__box {
+    border: none;
+    background-color: #EBEBEB;
+    width: 40rem;
+    height: 3rem;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 15px;
+}
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 92vh;
+}
+
+.form__container {
+    background-color: #FFFFFF;
+    width: 60%;
+    height: 34%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    margin-block: 35px;
+    border-radius: 10px;
+
+}
+
+.form__title.title2,
+h2 {
+
+    width: 90%;
+    padding-top: 40px;
+    font-size: 25px;
+}
+
+.form__input-container {
+
+    display: flex;
+    width: 90%;
+    height: 3rem;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+#input_title {
+
+    border: none;
+    background-color: #EBEBEB;
+    width: 55%;
+    height: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+.form__input--priority.input__box {
+
+    border: none;
+    background-color: #EBEBEB;
+    width: 35%;
+    height: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+.form__button--add-task {
+
+    border: none;
+    background-color: #3B5BDB;
+    color: #FFFFFF;
+    width: 90%;
+    height: 3.5rem;
+    font-size: 16px;
+    font-weight: 450;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tasks__container {
+
+    background-color: #FFFFFF;
+    width: 60%;
+    height: 47%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.tasks__list {
+
+    width: 90%;
+    height: 60%;
+}
+
+.task__item {
+
+    background-color: #F1F3F5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    margin-block: 20px;
+    padding-inline: 20px;
+    border-radius: 5px;
+}
+
+.task__button--remove-task{
+    border: none;
+    background-color: transparent;
+    background-image: url("./assets/trash-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 17px;
+    width: 17px;
+}
+
+.task-info__container{
+    
+    width:100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.task-type.span-urgent{
+
+    background-color: #e40404;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+.task-type.span-important{
+
+    background-color: #f3a703;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+.task-type.span-normal{
+
+    background-color: #028302;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
