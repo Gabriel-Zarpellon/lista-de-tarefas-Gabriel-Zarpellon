@@ -151,6 +151,10 @@ h2 {
     width: 17px;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .task-info__container{
     
     width:100%;

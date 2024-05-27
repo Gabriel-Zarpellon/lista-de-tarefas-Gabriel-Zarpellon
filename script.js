@@ -11,7 +11,6 @@ const tasks = [
   { title: "Assistir a um documentário interessante", type: "Normal" },
 ];
 
-
 function renderElements(taskList) {
 
   let ulTasks = document.querySelector('.tasks__list');
@@ -40,6 +39,16 @@ function createTaskItem(taskList) {
   taskDescription.innerText = taskList.title;
   taskButton.classList.add('task__button--remove-task');
 
+  taskButton.addEventListener("click", function () {
+
+    let searchArray = taskList;
+    let foundIndex = tasks.indexOf(searchArray);
+
+    tasks.splice(foundIndex, 1);
+
+    return renderElements(tasks);
+  })
+
   if (taskList.type.toLowerCase() == 'urgente') {
 
     taskType.classList.add('span-urgent');
@@ -54,8 +63,6 @@ function createTaskItem(taskList) {
   }
   return taskItem;
 }
-
-renderElements(tasks);
 
 let formButton = document.querySelector('.form__button--add-task');
 
@@ -72,6 +79,7 @@ formButton.addEventListener("click", function () {
     type: newType.value
   }
   tasks.push(newTask);
-  renderElements(tasks);
+  return renderElements(tasks);
 })
 
+renderElements(tasks);
