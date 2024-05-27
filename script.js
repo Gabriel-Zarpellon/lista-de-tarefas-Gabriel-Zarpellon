@@ -40,11 +40,11 @@ function createTaskItem(taskList) {
   taskDescription.innerText = taskList.title;
   taskButton.classList.add('task__button--remove-task');
 
-  if (taskList.type == 'Urgente') {
+  if (taskList.type.toLowerCase() == 'urgente') {
 
     taskType.classList.add('span-urgent');
 
-  } else if (taskList.type == 'Importante') {
+  } else if (taskList.type.toLowerCase() == 'importante') {
 
     taskType.classList.add('span-important');
 
@@ -56,4 +56,22 @@ function createTaskItem(taskList) {
 }
 
 renderElements(tasks);
+
+let formButton = document.querySelector('.form__button--add-task');
+
+formButton.addEventListener("click", function () {
+
+  event.preventDefault();
+
+  let newTitle = document.querySelector("#input_title");
+  let newType = document.querySelector(".form__input--priority");
+
+  let newTask = {
+
+    title: newTitle.value,
+    type: newType.value
+  }
+  tasks.push(newTask);
+  renderElements(tasks);
+})
 
